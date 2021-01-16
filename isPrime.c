@@ -23,6 +23,13 @@ unsigned long inputNumber; /*  the input number entered from the user */
 
 int main(void){
     while (1){
+        /* 
+         * we use printf, fgets, sscanf 
+         * printf() -> to prompt user "Please enter number to check if it's prime (0 terminates): "
+         * fget()   -> to get input from the user
+         * sscanf() -> to parse the input from the user and fill inputNumber
+         */
+        
         printf("Please enter number to check if it's prime (0 terminates): ");
         fgets(inputBuff, sizeof(inputBuff), stdin);
         sscanf(inputBuff, "%lu", &inputNumber);
